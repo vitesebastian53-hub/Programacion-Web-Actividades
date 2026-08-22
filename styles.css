@@ -1,0 +1,283 @@
+/* ============================================================
+   Portafolio de Sebastian Vite — sistema de diseño "esquema técnico"
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --color-bg: #14213D;
+  --color-bg-alt: #101a33;
+  --color-panel: #1B2C4D;
+  --color-line: #E8ECF1;
+  --color-line-soft: #8CA0BE;
+  --color-accent: #F2A65A;
+  --color-accent-soft: #5C8B93;
+  --color-grid: #2A3F5F;
+
+  /* Tipografia */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Espaciado */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+
+  /* Otros */
+  --radius: 2px;
+  --border: 1px solid var(--color-grid);
+  --max-width: 1120px;
+}
+
+/* ---------- Reset basico ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--color-line);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-soft);
+  margin-bottom: var(--space-xs);
+}
+
+/* ============================================================
+   Encabezado
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(20, 33, 61, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: var(--border);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.header-id {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-id .name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-line);
+}
+
+.header-id .role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-line-soft);
+}
+
+.main-nav ul {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.main-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--color-line-soft);
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ============================================================
+   Hero / seccion principal
+   ============================================================ */
+
+.hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero-text {
+  flex: 1 1 55%;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-text h1 span {
+  color: var(--color-accent);
+}
+
+.hero-text p {
+  color: var(--color-line-soft);
+  max-width: 46ch;
+  margin-bottom: var(--space-md);
+  font-size: 1.05rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-accent);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  color: var(--color-line-soft);
+  border-color: var(--color-grid);
+}
+
+.btn-ghost:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.hero-figure {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-figure img {
+  width: 100%;
+  max-width: 340px;
+  border: var(--border);
+}
+
+/* ============================================================
+   Pie de pagina
+   ============================================================ */
+
+.site-footer {
+  border-top: var(--border);
+  padding: var(--space-md) 0;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-line-soft);
+}
+
+.footer-bar a:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   Responsivo
+   ============================================================ */
+
+@media (max-width: 820px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .hero-figure {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
