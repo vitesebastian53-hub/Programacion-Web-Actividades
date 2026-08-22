@@ -226,8 +226,152 @@ a {
   border: var(--border);
 }
 
+/* Diagrama de nodos: About / Habilidades / Proyectos / Contacto */
+.diagram-nav {
+  padding: var(--space-md) 0 var(--space-lg);
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.diagram-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.diagram-node {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-line-soft);
+  border: 1px dashed var(--color-grid);
+  padding: 0.6rem 1rem;
+  position: relative;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.diagram-node:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.diagram-node .cardinality {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.4rem;
+  background-color: var(--color-bg);
+  color: var(--color-accent-soft);
+  font-size: 0.65rem;
+  padding: 0 4px;
+}
+
+.diagram-edge {
+  flex: 1;
+  min-width: 24px;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-grid),
+    var(--color-grid) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
 /* ============================================================
-   Pie de pagina
+   Secciones generales
+   ============================================================ */
+
+section {
+  padding: var(--space-xl) 0;
+}
+
+.section-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading h2 {
+  font-size: 1.9rem;
+}
+
+/* ---------- Sobre mi ---------- */
+
+.about-grid {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  color: var(--color-line-soft);
+  max-width: 62ch;
+}
+
+.about-text strong {
+  color: var(--color-line);
+}
+
+.about-meta {
+  flex: 1 1 30%;
+  border: var(--border);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.about-meta dt {
+  color: var(--color-accent-soft);
+  margin-top: var(--space-sm);
+}
+
+.about-meta dt:first-child {
+  margin-top: 0;
+}
+
+.about-meta dd {
+  color: var(--color-line);
+}
+
+/* ---------- Habilidades ---------- */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-card {
+  flex: 1 1 220px;
+  border: var(--border);
+  padding: var(--space-sm) var(--space-md);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+
+.skill-card .tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+}
+
+.skill-card h3 {
+  font-size: 1.05rem;
+  margin: var(--space-xs) 0;
+}
+
+.skill-card p {
+  color: var(--color-line-soft);
+  font-size: 0.88rem;
+}
+
+/* ============================================================
+   Pie de página
    ============================================================ */
 
 .site-footer {
@@ -272,6 +416,20 @@ a {
 
   .hero-figure {
     order: -1;
+  }
+
+  .diagram-edge {
+    display: none;
+  }
+
+  .diagram-nav .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-grid,
+  .contact-wrap {
+    flex-direction: column;
   }
 }
 
