@@ -1,22 +1,24 @@
 # Portafolio Personal — Sebastian Vite
 
-**Estudiante:** Sebastian Andres Vite Diaz
-**Carrera:** Ingenieria en Sistemas
+**Estudiante:** Sebastian Andrés Vite Díaz
+**Carrera:** Ingeniería en Sistemas
 
-## Descripcion
+## Descripción
 
-Portafolio personal que presenta quien soy, mis habilidades tecnicas y de idioma,
-dos proyectos academicos y un formulario de contacto. Hecho con HTML y CSS puro.
+Portafolio personal que presenta quién soy, mis habilidades técnicas y de idioma,
+dos proyectos académicos y un formulario de contacto. Hecho con HTML y CSS puro.
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
-- HTML5 semantico
+- HTML5 semántico
 - CSS3 (Flexbox, variables en :root, diseño responsivo)
 - Git y GitHub
 
-## Como visualizar el proyecto
+## Cómo visualizar el proyecto
 
 1. Clonar este repositorio.
 2. Abrir index.html en cualquier navegador.
 
-Al momento aun no termino pero tengo el readme listo
+## Captura de pantalla
+
+![Portafolio de Sebastian Vite](img/captura-portafolio.png)

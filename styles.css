@@ -370,6 +370,126 @@ section {
   font-size: 0.88rem;
 }
 
+/* ---------- Proyectos ---------- */
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.project-card {
+  flex: 1 1 calc(50% - var(--space-md));
+  border: var(--border);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--color-accent);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  border-bottom: var(--border);
+}
+
+.project-body {
+  padding: var(--space-md);
+}
+
+.project-body .tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-accent-soft);
+}
+
+.project-body h3 {
+  font-size: 1.2rem;
+  margin: var(--space-xs) 0;
+}
+
+.project-body p {
+  color: var(--color-line-soft);
+  font-size: 0.9rem;
+}
+
+/* ---------- Contacto ---------- */
+
+.contact-wrap {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.contact-intro {
+  flex: 1 1 35%;
+  color: var(--color-line-soft);
+}
+
+.contact-email {
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.contact-email a:hover {
+  color: var(--color-line);
+}
+
+.contact-form {
+  flex: 1 1 65%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border: var(--border);
+  padding: var(--space-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-soft);
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: var(--color-panel);
+  border: var(--border);
+  border-radius: var(--radius);
+  color: var(--color-line);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.85rem;
+}
+
+.form-field input:hover,
+.form-field textarea:hover,
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  background: none;
+  cursor: pointer;
+}
+
 /* ============================================================
    Pie de página
    ============================================================ */
@@ -430,6 +550,10 @@ section {
   .about-grid,
   .contact-wrap {
     flex-direction: column;
+  }
+
+  .project-card {
+    flex: 1 1 100%;
   }
 }
 

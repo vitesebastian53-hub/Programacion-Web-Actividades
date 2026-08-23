@@ -1,0 +1,38 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#2A3F5F" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="300" fill="#14213D"/>
+  <rect width="480" height="300" fill="url(#grid3)"/>
+
+  <!-- axes -->
+  <g stroke="#5C8B93" stroke-width="1.5">
+    <line x1="60" y1="40" x2="60" y2="250"/>
+    <line x1="60" y1="250" x2="440" y2="250"/>
+  </g>
+
+  <!-- bars 2017-2023 -->
+  <g fill="none" stroke="#F2A65A" stroke-width="2">
+    <rect x="85"  y="190" width="34" height="60"/>
+    <rect x="140" y="170" width="34" height="80"/>
+    <rect x="195" y="205" width="34" height="45"/>
+    <rect x="250" y="150" width="34" height="100"/>
+    <rect x="305" y="120" width="34" height="130"/>
+    <rect x="360" y="95"  width="34" height="155"/>
+    <rect x="415" y="70"  width="34" height="180"/>
+  </g>
+
+  <g font-family="'IBM Plex Mono', monospace" font-size="10" fill="#8CA0BE">
+    <text x="102" y="265" text-anchor="middle">17</text>
+    <text x="157" y="265" text-anchor="middle">18</text>
+    <text x="212" y="265" text-anchor="middle">19</text>
+    <text x="267" y="265" text-anchor="middle">20</text>
+    <text x="322" y="265" text-anchor="middle">21</text>
+    <text x="377" y="265" text-anchor="middle">22</text>
+    <text x="432" y="265" text-anchor="middle">23</text>
+  </g>
+
+  <text x="240" y="24" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#E8ECF1" letter-spacing="1">SELECT anio, total_fob FROM exportaciones</text>
+</svg>
