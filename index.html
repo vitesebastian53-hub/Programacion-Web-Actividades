@@ -26,6 +26,9 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar modo claro u oscuro">
+        <span id="theme-toggle-label">Modo claro</span>
+      </button>
     </div>
   </header>
 
@@ -35,6 +38,7 @@
       <div class="container">
         <div class="hero-text">
           <span class="eyebrow">// portafolio_personal.init()</span>
+          <p id="saludo-visitante" class="saludo-visitante" hidden></p>
           <h1>Construyo sistemas <span>legibles</span>,<br>desde la base de datos<br>hasta la interfaz.</h1>
           <p>
             Soy Sebastian, estudiante de Ingeniería en Sistemas, proactivo y autodidacta.
@@ -213,6 +217,7 @@
               <textarea id="mensaje" name="mensaje" placeholder="Cuéntame en qué puedo ayudarte"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            <p id="form-mensaje" class="form-mensaje" hidden></p>
           </form>
         </div>
       </div>
@@ -227,5 +232,8 @@
     </div>
   </footer>
 
+  <button id="volver-arriba" class="volver-arriba" type="button" aria-label="Volver al inicio" hidden>↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
